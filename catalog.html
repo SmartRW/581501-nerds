@@ -7,7 +7,7 @@
   <body>
     <header class="main-header">
       <a class="header-logo" href="index.html">
-        <img src="http://placehold.it/160x65" alt="Логотип студии Nerds" width="160" height="65">
+        <img src="img/nerds-logo.svg" alt="Логотип студии Nerds" width="160" height="65">
       </a>
       <nav class="main-navigation">
         <ul>
@@ -33,7 +33,55 @@
       <h1>Магазин готовых шаблонов</h1>
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Фильтр товаров -->
+        <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="filter-price">
+            <legend>Стоимость:</legend>
+
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <input class="visually-hidden" type="radio" name="grid" value="adaptive" id="filter-grid" checked>
+                <label for="filter-grid">Адаптивная</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="radio" name="grid" value="static" id="filter-static">
+                <label for="filter-static">Адаптивная</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="radio" name="grid" value="fluid" id="filter-fluid">
+                <label for="filter-fluid">Адаптивная</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="filter-slider" id="filter-slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="filter-features" id="filter-features">
+                <label for="filter-features">Блок преимуществ</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="filter-news" id="filter-news" checked>
+                <label for="filter-news">Новости</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="filter-gallery" id="filter-gallery">
+                <label for="filter-gallery">Галерея</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="filter-cart" id="filter-cart">
+                <label for="filter-cart">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
       </section>
       <section class="products">
         <h2 class="visually-hidden">Товары</h2>
@@ -68,11 +116,11 @@
                 <li></li>
               </ul>
             </div>
-            <img src="http://placehold.it/360x576" alt="Sedona информационный сайт для туристов" width="360" height="576">
+            <img src="img/img-sedona.jpg" alt="Sedona информационный сайт для туристов" width="360" height="576">
             <div class="products-description">
               <h3>Sedona</h3>
               <p>Информационный сайт для туристов</p>
-              <a class="price" href="#"></a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="products-item">
@@ -83,11 +131,11 @@
                 <li></li>
               </ul>
             </div>
-            <img src="http://placehold.it/360x576" alt="Pink app Продуктовый лендинг приложения для iOS и Android" width="360" height="576">
+            <img src="img/img-pink.jpg" alt="Pink app Продуктовый лендинг приложения для iOS и Android" width="360" height="576">
             <div class="products-description">
               <h3>Pink app</h3>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
-              <a class="price" href="#"></a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="products-item">
@@ -98,11 +146,11 @@
                 <li></li>
               </ul>
             </div>
-            <img src="http://placehold.it/360x576" alt="Barbershop Сайт салона красоты" width="360" height="576">
+            <img src="img/img-barbershop.jpg" alt="Barbershop Сайт салона красоты" width="360" height="576">
             <div class="products-description">
               <h3>Barbershop</h3>
               <p>Сайт салона красоты. Для мужчин, да.</p>
-              <a class="price" href="#"></a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="products-item">
@@ -113,11 +161,11 @@
                 <li></li>
               </ul>
             </div>
-            <img src="http://placehold.it/360x576" alt="Mishka Интернет-магазин вязаных игрушек" width="360" height="576">
+            <img src="img/img-mishka.jpg" alt="Mishka Интернет-магазин вязаных игрушек" width="360" height="576">
             <div class="products-description">
               <h3>Mishka</h3>
               <p>Интернет-магазин вязаных игрушек</p>
-              <a class="price" href="#"></a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="products-item">
@@ -128,11 +176,11 @@
                 <li></li>
               </ul>
             </div>
-            <img src="http://placehold.it/360x576" alt="A plus Лендинг курсов повышения квалификации" width="360" height="576">
+            <img src="img/img-aplus.jpg" alt="A plus Лендинг курсов повышения квалификации" width="360" height="576">
             <div class="products-description">
               <h3>A plus</h3>
               <p>Лендинг курсов повышения квалификации</p>
-              <a class="price" href="#"></a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="products-item">
@@ -143,11 +191,11 @@
                 <li></li>
               </ul>
             </div>
-            <img src="http://placehold.it/360x576" alt="Кваст Промо-сайт производителя крафтового кваса" width="360" height="576">
+            <img src="img/img-kvast.jpg" alt="Кваст Промо-сайт производителя крафтового кваса" width="360" height="576">
             <div class="products-description">
               <h3>Кваст</h3>
               <p>Промо-сайт производителя крафтового кваса</p>
-              <a class="price" href="#"></a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
         </ul>
@@ -171,7 +219,7 @@
       <h2 class="visually-hidden">Как нас найти</h2>
       <div class="footer-contacts">
         <div class="footer-map">
-          <!-- Контейнер для карты -->
+          <img src="img/map-large.png" alt="Студия на карте Санкт-Петербурга" width="1440" height="416">
         </div>
         <div class="footer-address">
           <h3>Nёrds design studio</h3>
@@ -187,13 +235,13 @@
       </div>
       <ul class="social-list">
         <li>
-          <a href="">ВКонтакте</a>
+          <a href="#">ВКонтакте</a>
         </li>
         <li>
-          <a href="">Фейсбук</a>
+          <a href="#">Фейсбук</a>
         </li>
         <li>
-          <a href="">Инстаграмм</a>
+          <a href="#">Инстаграмм</a>
         </li>
       </ul>
       <div class="offer-wrapper">
@@ -207,8 +255,16 @@
     </footer>
     <div class="modal-feedback">
       <h2 class="feedback">Напишите нам</h2>
-      <span>X</span>
-      <!-- Форма обратной связи -->
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <label for="feedback-name">Ваше имя:</label>
+        <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+        <label for="feedback-email">Ваш e-mail:</label>
+        <input type="email" name="email" id="feedback-email" placeholder="email@example.com">
+        <label for="feedback-message">Текст письма:</label>
+        <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </div>
   </body>
 </html>

@@ -7,7 +7,7 @@
   <body>
     <header class="main-header">
         <a class="header-logo">
-          <img src="http://placehold.it/160x65" alt="Логотип студии Nerds" width="160" height="65">
+          <img src="img/nerds-logo.svg" alt="Логотип студии Nerds" width="160" height="65">
         </a>
       <nav class="main-navigation">
         <ul>
@@ -42,9 +42,9 @@
               <p class="slider-description">
                 Математически выверенный дизайн для вашего сайта или мобильного приложения.
               </p>
-              <button class="button">Узнать больше</button>
+              <a class="button" href="#">Узнать больше</a>
             </div>
-            <img class="slider-image" src="http://placehold.it/698x413" alt="" width="698" height="413">
+            <img class="slider-image" src="img/slide1.png" alt="" width="698" height="413">
           </li>
           <li class="slide slide-2">
             <div class="slider-promo">
@@ -54,9 +54,9 @@
               <p class="slider-description">
                 Никакого креатива, только математические формулы для расчета идеальных пропорций.
               </p>
-              <button class="button">Узнать больше</button>
+              <a class="button" href="#">Узнать больше</a>
             </div>
-            <img class="slider-image" src="http://placehold.it/663x430" alt="" width="663" height="430">
+            <img class="slider-image" src="img/slide2.png" alt="" width="663" height="430">
           </li>
           <li class="slide slide-3">
             <div class="slider-promo">
@@ -66,9 +66,9 @@
               <p class="slider-description">
                 Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
               </p>
-              <button class="button">Узнать больше</button>
+              <a class="button" href="#">Узнать больше</a>
             </div>
-            <img class="slider-image" src="http://placehold.it/759x411" alt="" width="759" height="411">
+            <img class="slider-image" src="img/slide3.png" alt="" width="759" height="411">
           </li>
         </ul>
         <div class="slider-radio">
@@ -129,7 +129,7 @@
           </ul>
         </div>
         <div class="about-features">
-          <img class="about-logo" src="http://placehold.it/360x208" alt="Логотип студии Nerds" width="360" height="208">
+          <img class="about-logo" src="img/nerds-illustration.png" alt="Логотип студии Nerds" width="360" height="208">
           <table class="about-advantages">
             <caption>
               С 2004 года любим точность во всем:
@@ -152,22 +152,22 @@
         <ul class="portfolio-list">
           <li class="portfolio-item">
             <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <img class="portfolio-image" src="http://placehold.it/199x68" alt="HTML Academy" width="199" height="68">
+              <img class="portfolio-image" src="img/logo-1.png" alt="HTML Academy" width="199" height="68">
             </a>
           </li>
           <li class="portfolio-item">
             <a href="#">
-              <img class="portfolio-image" src="http://placehold.it/209x90" alt="Barbershop Borodinski" width="209" height="90">
+              <img class="portfolio-image" src="img/logo-2.png" alt="Barbershop Borodinski" width="209" height="90">
             </a>
           </li>
           <li class="portfolio-item">
             <a href="">
-              <img class="portfolio-image" src="http://placehold.it/185x52" alt="Pink" width="185" height="52">
+              <img class="portfolio-image" src="img/logo-3.png" alt="Pink" width="185" height="52">
             </a>
           </li>
           <li class="portfolio-item">
             <a href="">
-              <img class="portfolio-image" src="http://placehold.it/173x84" alt="Mishka" width="173" height="84">
+              <img class="portfolio-image" src="img/logo-4.png" alt="Mishka" width="173" height="84">
             </a>
           </li>
         </ul>
@@ -177,7 +177,7 @@
       <h2 class="visually-hidden">Как нас найти</h2>
       <div class="footer-contacts">
         <div class="footer-map">
-          <!-- Контейнер для карты -->
+          <img src="img/map-large.png" alt="Студия на карте Санкт-Петербурга" width="1440" height="416">
         </div>
         <div class="footer-address">
           <h3>Nёrds design studio</h3>
@@ -213,8 +213,16 @@
     </footer>
     <div class="modal-feedback">
       <h2 class="feedback">Напишите нам</h2>
-      <span>X</span>
-      <!-- Форма обратной связи -->
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <label for="feedback-name">Ваше имя:</label>
+        <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+        <label for="feedback-email">Ваш e-mail:</label>
+        <input type="email" name="email" id="feedback-email" placeholder="email@example.com">
+        <label for="feedback-message">Текст письма:</label>
+        <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </div>
   </body>
 </html>

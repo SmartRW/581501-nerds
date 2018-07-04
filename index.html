@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -33,10 +35,10 @@
       <h1 class="visually-hidden">Дизайн-студия &#171;Nerds&#187;</h1>
       <section class="slider">
         <h2 class="visually-hidden">Как мы работаем</h2>
-        <ul class="slider_list">
+        <ul class="slider-list">
           <li class="slide slide-1">
             <div class="slider-promo">
-              <p class="slider-motto">
+              <h2 class="slider-motto">
                 Долго, дорого, скрупулезно.
               </p>
               <p class="slider-description">
@@ -48,7 +50,7 @@
           </li>
           <li class="slide slide-2">
             <div class="slider-promo">
-              <p class="slider-motto">
+              <h2 class="slider-motto">
                 Мы любим математику как никто другой
               </p>
               <p class="slider-description">
@@ -60,7 +62,7 @@
           </li>
           <li class="slide slide-3">
             <div class="slider-promo">
-              <p class="slider-motto">
+              <h2 class="slider-motto">
                 Только ночь, только хардкор
               </p>
               <p class="slider-description">
@@ -71,9 +73,29 @@
             <img class="slider-image" src="img/slide3.png" alt="" width="759" height="411">
           </li>
         </ul>
-        <div class="slider-radio">
-          <!-- Контейнер для радио-кнопок переключения слайдера -->
-        </div>
+        <ul class="slider-radio">
+          <li>
+            <button type="button" name="slider-control slider-control-current">
+              <span>
+                <span class="visually-hidden">Первый слайд</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" name="slider-control">
+              <span>
+                <span class="visually-hidden">Второй слайд</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" name="slider-control">
+              <span>
+                <span class="visually-hidden">Третий слайд</span>
+              </span>
+            </button>
+          </li>
+        </ul>
       </section>
       <section class="advantages">
         <h2 class="visually-hidden">Что мы умеем</h2>
@@ -84,7 +106,7 @@
             <p class="advantages-description">
               Мир никогда не будет прежним после того, как увидит ваш сайт!
             </p>
-            <button class="button">Заказать</button>
+            <button class="button advantages-button advantages-button-green">Заказать</button>
           </li>
           <li class="advantages-item">
             <div class="advantages-icon"></div>
@@ -92,7 +114,7 @@
             <p class="advantages-description">
               Покорите топ-10 приложений в AppStore и GooglePlay
             </p>
-            <button class="button">Заказать</button>
+            <button class="button advantages-button advantages-button-green">Заказать</button>
           </li>
           <li class="advantages-item">
             <div class="advantages-icon"></div>
@@ -100,16 +122,16 @@
             <p class="advantages-description">
               Вы даже не подозреваете, насколько вы изумительны!
             </p>
-            <button class="button">Заказать</button>
+            <button class="button advantages-button advantages-button-yellow">Заказать</button>
           </li>
         </ul>
       </section>
       <section class="about">
         <h2 class="visually-hidden">О нас</h2>
         <div class="about-description">
-          <p class="about-header">
+          <h2 class="about-header">
             Мы &#8212; маленькая, но гордая дизайн-студия из Краснодара.
-          </p>
+          </h2>
           <p class="about-description">
             Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
           </p>

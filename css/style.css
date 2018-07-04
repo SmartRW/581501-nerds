@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: local("Roboto Regular"), local("Roboto-Regular"),
+       url("../font/roboto.woff2") format("woff2"),
+       url("../font/roboto.woff") format("woff");
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+       url("../font/robotobold.woff2") format("woff2"),
+       url("../font/robotobold.woff") format("woff");
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+       url("../font/robotomedium.woff2") format("woff2"),
+       url("../font/robotomedium.woff") format("woff");
+       font-weight: normal;
+       font-style: normal;
+}
+
+.visually-hidden
+{
+  position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+  margin: 0;
+	overflow: hidden;
+}
+
+/* NOTE: Отладочный класс */
+
+.test {
+  outline: 1px solid skyblue;
+}
+
+/* NOTE: Общие стили */
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 1200px;
+  color: #283136;
+  font-family: "Roboto Regular";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* NOTE: Стили шапки */
+
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-navigation a {
+  font-family: "Roboto Medium";
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* NOTE: стили слайдера */
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-motto {
+  font-family: "Roboto Medium";
+  font-size: 55px;
+  line-height: 55px;
+  color: #000000;
+}
+
+.button {
+  border-radius: 5px;
+  font-family: "Roboto Medium";
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #fb565a;
+}
+
+/* NOTE: стили блока "Преимущества" */
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-header {
+  font-family: "Roboto Bold";
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantages-button-green {
+  background-color: #00ca74;
+}
+
+.advantages-button-yellow {
+  background-color: #efc84a;
+}
+
+/* NOTE: стили блока О нас */
+
+.about-header {
+  font-family: "Roboto Medium";
+  font-size: 45px;
+  line-height: 45px;
+  color: #000000;
+}
+
+.about-list-header {
+  font-family: "Roboto Bold";
+  text-transform: uppercase;
+  color: #000000;
+}

@@ -54,7 +54,8 @@ img {
 }
 
 body {
-  min-width: 1200px;
+  margin: 0;
+  padding: 0;
   color: #283136;
   font-family: "Roboto Regular";
   font-size: 16px;
@@ -63,18 +64,70 @@ body {
 
 /* NOTE: Стили шапки */
 
+.header-wrapper {
+  background-color: #eeeeee;
+}
+
+.main-header {
+  display: flex;
+  align-items: flex-end;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 48px 20px 0;
+}
+
+.header-logo {
+  margin-right: 202px;
+}
+
+.main-navigation {
+  margin: 0;
+  margin-right: auto;
+}
+
 .main-navigation ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 438px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .main-navigation a {
+  display: block;
+  padding: 13px 0;
+  border-bottom: 2px solid transparent;
   font-family: "Roboto Medium";
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
   color: #000000;
+}
+
+.basket {
+  position: relative;
+  display: block;
+  padding: 13px 0;
+  border-bottom: 2px solid transparent;
+  padding-left: 40px;
+  font-family: "Roboto Medium";
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.basket::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/cart-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* NOTE: стили слайдера */
@@ -93,6 +146,7 @@ body {
 }
 
 .button {
+  border: none;
   border-radius: 5px;
   font-family: "Roboto Medium";
   font-size: 16px;
@@ -104,10 +158,49 @@ body {
 
 /* NOTE: стили блока "Преимущества" */
 
+.main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .advantages-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.advantages-sites::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 146px;
+  background-image: url("../img/illustration-1.png");
+  background-color: #fb565a;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages-apps::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 146px;
+  background-image: url("../img/illustration-2.png");
+  background-color: #00ca74;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages-presentations::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 146px;
+  background-image: url("../img/illustration-3.png");
+  background-color: #efc849;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .advantages-header {
@@ -118,11 +211,19 @@ body {
   color: #000000;
 }
 
-.advantages-button-green {
+.advantages-button {
+
+}
+
+.advantages-sites .advantages-button {
+  background-color: #fb565a
+}
+
+.advantages-apps .advantages-button {
   background-color: #00ca74;
 }
 
-.advantages-button-yellow {
+.advantages-presentations .advantages-button {
   background-color: #efc84a;
 }
 
@@ -138,5 +239,106 @@ body {
 .about-list-header {
   font-family: "Roboto Bold";
   text-transform: uppercase;
+  color: #000000;
+}
+
+.about-services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-values td {
+  font-family: "Roboto Bold";
+  font-size: 45px;
+  line-height: 10px;
+}
+
+.about-values span {
+  vertical-align: super;
+}
+
+.portfolio-image {
+  opacity: 0.2;
+}
+
+/* NOTE: Стили подвала */
+
+.footer-map {
+  position: relative;
+}
+
+.footer-address {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: #666666;
+  line-height: 18px;
+  background-color: #ffffff;
+}
+
+.footer-address h3 {
+  font-family: "Roboto Bold";
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  text-align: center;
+}
+
+.social-vk::before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 15px;
+  background-image: url("../img/vk-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-fb::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 22px;
+  background-image: url("../img/fb-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-instagram::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/insta-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.offer-wrapper {
+  line-height: 22px;
+  color: #444444;
+}
+
+.offer-motto {
+  font-family: "Roboto Bold";
+  font-size: 36px;
+  line-height: 36px;
   color: #000000;
 }

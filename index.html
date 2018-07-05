@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+  <div class="header-wrapper">
     <header class="main-header">
         <a class="header-logo">
           <img src="img/nerds-logo.svg" alt="Логотип студии Nerds" width="160" height="65">
@@ -27,10 +28,9 @@
           </li>
         </ul>
       </nav>
-      <div class="basket">
-        <a href="#">Корзина</a>
-      </div>
+      <a class="basket" href="#">Корзина</a>
     </header>
+  </div>
     <main class="main">
       <h1 class="visually-hidden">Дизайн-студия &#171;Nerds&#187;</h1>
       <section class="slider">
@@ -40,7 +40,7 @@
             <div class="slider-promo">
               <h2 class="slider-motto">
                 Долго, дорого, скрупулезно.
-              </p>
+              </h2>
               <p class="slider-description">
                 Математически выверенный дизайн для вашего сайта или мобильного приложения.
               </p>
@@ -52,7 +52,7 @@
             <div class="slider-promo">
               <h2 class="slider-motto">
                 Мы любим математику как никто другой
-              </p>
+              </h2>
               <p class="slider-description">
                 Никакого креатива, только математические формулы для расчета идеальных пропорций.
               </p>
@@ -64,7 +64,7 @@
             <div class="slider-promo">
               <h2 class="slider-motto">
                 Только ночь, только хардкор
-              </p>
+              </h2>
               <p class="slider-description">
                 Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
               </p>
@@ -100,29 +100,26 @@
       <section class="advantages">
         <h2 class="visually-hidden">Что мы умеем</h2>
         <ul class="advantages-list">
-          <li class="advantages-item">
-            <div class="advantages-icon"></div>
+          <li class="advantages-item advantages-sites">
             <h3 class="advantages-header">Веб-сайты</h3>
             <p class="advantages-description">
               Мир никогда не будет прежним после того, как увидит ваш сайт!
             </p>
-            <button class="button advantages-button advantages-button-green">Заказать</button>
+            <button class="button advantages-button">Заказать</button>
           </li>
-          <li class="advantages-item">
-            <div class="advantages-icon"></div>
+          <li class="advantages-item advantages-apps">
             <h3 class="advantages-header">Приложения</h3>
             <p class="advantages-description">
               Покорите топ-10 приложений в AppStore и GooglePlay
             </p>
-            <button class="button advantages-button advantages-button-green">Заказать</button>
+            <button class="button advantages-button">Заказать</button>
           </li>
-          <li class="advantages-item">
-            <div class="advantages-icon"></div>
+          <li class="advantages-item advantages-presentations">
             <h3 class="advantages-header">Презентации</h3>
             <p class="advantages-description">
               Вы даже не подозреваете, насколько вы изумительны!
             </p>
-            <button class="button advantages-button advantages-button-yellow">Заказать</button>
+            <button class="button advantages-button">Заказать</button>
           </li>
         </ul>
       </section>
@@ -199,29 +196,35 @@
       <h2 class="visually-hidden">Как нас найти</h2>
       <div class="footer-contacts">
         <div class="footer-map">
+          <div class="footer-address">
+            <h3>Nёrds design studio</h3>
+            <p>
+              191186, Санкт-Петербург,<br>
+              ул. Б.Конюшенная, д.19/8
+            </p>
+            <p>
+              <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+            </p>
+            <button class="button">Напишите нам</button>
+          </div>
           <img src="img/map-large.png" alt="Студия на карте Санкт-Петербурга" width="1440" height="416">
-        </div>
-        <div class="footer-address">
-          <h3>Nёrds design studio</h3>
-          <p>
-            191186, Санкт-Петербург,<br>
-            ул. Б.Конюшенная, д.19/8
-          </p>
-          <p>
-            <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-          </p>
-          <button class="button">Напишите нам</button>
         </div>
       </div>
       <ul class="social-list">
         <li>
-          <a href="">ВКонтакте</a>
+          <a class="social-button social-vk" href="">
+            <span class="visually-hidden">ВКонтакте</span>
+          </a>
         </li>
         <li>
-          <a href="">Фейсбук</a>
+          <a class="social-button social-fb" href="">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
         </li>
         <li>
-          <a href="">Инстаграмм</a>
+          <a class="social-button social-instagram" href="">
+            <span class="visually-hidden">Инстаграмм</span>
+          </a>
         </li>
       </ul>
       <div class="offer-wrapper">

@@ -62,9 +62,14 @@ body {
   line-height: 24px;
 }
 
+button span {
+  position: relative;
+}
+
 /* NOTE: Стили шапки */
 
 .header-wrapper {
+  min-width: 1200px;
   background-color: #eeeeee;
 }
 
@@ -105,6 +110,16 @@ body {
   color: #000000;
 }
 
+.main-navigation a:hover,
+.basket:hover {
+  color: #fb565a;
+}
+
+.main-navigation a:active,
+.basket:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .basket {
   position: relative;
   display: block;
@@ -132,22 +147,73 @@ body {
 
 /* NOTE: стили слайдера */
 
+.slider {
+  position: relative;
+  min-width: 1200px;
+}
+
 .slider-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: #eeeeee;
+}
+
+.slide {
+  display: none;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+  min-height: 425px;
+  background-position: 90% 100%;
+  background-repeat: no-repeat;
+}
+
+.slide-visible {
+  display: block;
+}
+
+.slide-1 {
+  background-image: url("../img/slide1.png");
+  background-size: 698px 413px;
+}
+
+.slide-2 {
+  background-image: url("../img/slide2.png");
+  background-size: 663px 430px;
+}
+
+.slide-3 {
+  background-image: url("../img/slide3.png");
+  background-size: 759px 411px;
+}
+
+.slider-promo {
+  width: 530px;
+  padding-top: 73px;
 }
 
 .slider-motto {
+  margin: 0;
+  margin-bottom: 25px;
   font-family: "Roboto Medium";
   font-size: 55px;
   line-height: 55px;
   color: #000000;
 }
 
+.slider-description {
+  margin-bottom: 39px;
+}
+
 .button {
+  display: block;
+  box-sizing: border-box;
+  width: 240px;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
+  padding: 16px;
+  text-align: center;
   font-family: "Roboto Medium";
   font-size: 16px;
   line-height: 18px;
@@ -156,13 +222,50 @@ body {
   background-color: #fb565a;
 }
 
-/* NOTE: стили блока "Преимущества" */
-
-.main {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.slider-button:hover {
+  background-color: #e74246;
 }
+
+.slider-button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.slider-radio {
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  margin: 0;
+  margin-left: -45px;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-control {
+  display: block;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+.slider-control-current::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #c2c2c2;
+}
+
+/* NOTE: стили блока "Преимущества" */
 
 .advantages-list {
   margin: 0;

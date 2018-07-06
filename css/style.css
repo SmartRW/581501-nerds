@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Roboto Regular";
   src: local("Roboto Regular"), local("Roboto-Regular"),
-       url("../font/roboto.woff2") format("woff2"),
-       url("../font/roboto.woff") format("woff");
+       url("../font/Roboto-Regular.woff2") format("woff2"),
+       url("../font/Roboto-Regular.woff") format("woff");
        font-weight: normal;
        font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
   font-family: "Roboto Bold";
   src: local("Roboto Bold"), local("Roboto-Bold"),
-       url("../font/robotobold.woff2") format("woff2"),
-       url("../font/robotobold.woff") format("woff");
+       url("../font/Roboto-Bold.woff2") format("woff2"),
+       url("../font/Roboto-Bold.woff") format("woff");
        font-weight: normal;
        font-style: normal;
 }
@@ -19,8 +19,8 @@
 @font-face {
   font-family: "Roboto Medium";
   src: local("Roboto Medium"), local("Roboto-Medium"),
-       url("../font/robotomedium.woff2") format("woff2"),
-       url("../font/robotomedium.woff") format("woff");
+       url("../font/Roboto-Medium.woff2") format("woff2"),
+       url("../font/Roboto-Medium.woff") format("woff");
        font-weight: normal;
        font-style: normal;
 }
@@ -57,10 +57,12 @@ body {
   margin: 0;
   padding: 0;
   color: #283136;
-  font-family: "Roboto Regular";
+  font-family: "Roboto Regular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
+
+/* HACK: для удаления смещения текста при нажатии в IE11 */
 
 button span {
   position: relative;
@@ -103,7 +105,7 @@ button span {
   display: block;
   padding: 13px 0;
   border-bottom: 2px solid transparent;
-  font-family: "Roboto Medium";
+  font-family: "Roboto Medium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
@@ -126,7 +128,7 @@ button span {
   padding: 13px 0;
   border-bottom: 2px solid transparent;
   padding-left: 40px;
-  font-family: "Roboto Medium";
+  font-family: "Roboto Medium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
@@ -150,6 +152,7 @@ button span {
 .slider {
   position: relative;
   min-width: 1200px;
+  margin-bottom: 80px;
 }
 
 .slider-list {
@@ -196,7 +199,7 @@ button span {
 .slider-motto {
   margin: 0;
   margin-bottom: 25px;
-  font-family: "Roboto Medium";
+  font-family: "Roboto Medium", "Arial", sans-serif;
   font-size: 55px;
   line-height: 55px;
   color: #000000;
@@ -214,7 +217,7 @@ button span {
   border-radius: 3px;
   padding: 16px;
   text-align: center;
-  font-family: "Roboto Medium";
+  font-family: "Roboto Medium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -267,10 +270,24 @@ button span {
 
 /* NOTE: стили блока "Преимущества" */
 
+.advantages {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 80px;
+}
+
 .advantages-list {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.advantages-item {
+  width: 300px;
 }
 
 .advantages-sites::before {
@@ -307,7 +324,8 @@ button span {
 }
 
 .advantages-header {
-  font-family: "Roboto Bold";
+  margin-bottom: 18px;
+  font-family: "Roboto Bold", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
@@ -315,11 +333,16 @@ button span {
 }
 
 .advantages-button {
+  width: 160px;
+}
 
+.advantages-description {
+  width: 250px;
+  margin-bottom: 31px;
 }
 
 .advantages-sites .advantages-button {
-  background-color: #fb565a
+  background-color: #fb565a;
 }
 
 .advantages-apps .advantages-button {
@@ -330,17 +353,69 @@ button span {
   background-color: #efc84a;
 }
 
+.advantages-sites .advantages-button:hover {
+  background-color: #e74246;
+  cursor: pointer;
+}
+
+.advantages-apps .advantages-button:hover {
+  background-color: #00bc6c;
+  cursor: pointer;
+}
+
+.advantages-presentations .advantages-button:hover {
+  background-color: #eab534;
+  cursor: pointer;
+}
+
+.advantages-sites .advantages-button:focus {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-apps .advantages-button:focus {
+  background-color: #00aa62;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-presentations .advantages-button:focus {
+  background-color: #e5a722;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* NOTE: стили блока О нас */
 
+.about {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-top: 37px;
+  padding-bottom: 49px;
+  border-bottom: 2px solid #eeeeee;
+  border-top: 2px solid #eeeeee;
+}
+
+.about-us {
+  width: 670px;
+}
+
 .about-header {
-  font-family: "Roboto Medium";
+  margin-bottom: 33px;
+  font-family: "Roboto Medium", "Arial", sans-serif;
   font-size: 45px;
   line-height: 45px;
   color: #000000;
 }
 
+.about-description {
+  margin-bottom: 39px;
+}
+
 .about-list-header {
-  font-family: "Roboto Bold";
+  margin-bottom: 24px;
+  font-family: "Roboto Bold", "Arial", sans-serif;
   text-transform: uppercase;
   color: #000000;
 }
@@ -351,18 +426,100 @@ button span {
   list-style: none;
 }
 
+.about-services-list li {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 36px;
+}
+
+.about-services-list li:before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 1px;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+}
+
+.about-features {
+  width: 360px;
+  padding-top: 3px;
+}
+
+.about-logo {
+  margin-bottom: 29px;
+}
+
+.about-advantages {
+  border-collapse: collapse;
+}
+
+.about-advantages caption {
+  margin-bottom: 48px;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.about-advantages td:last-child {
+  width: 34%;
+}
+
+.about-names td {
+  line-height: 18px;
+  padding-top: 37px;
+}
+
 .about-values td {
-  font-family: "Roboto Bold";
+  font-family: "Roboto Bold", "Arial", sans-serif;
   font-size: 45px;
   line-height: 10px;
 }
 
 .about-values span {
+  font-size: 26px;
   vertical-align: super;
 }
 
-.portfolio-image {
-  opacity: 0.2;
+/* NOTE: Стили портфолио */
+
+.portfolio {
+  width: 1160px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.portfolio-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-left: 31px;
+  list-style: none;
+}
+
+.portfolio-item {
+  position: relative;
+}
+
+.portfolio-item a {
+  display: flex;
+}
+
+.portfolio-item:nth-child(n+2)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2px;
+  height: 52px;
+  background-color: #eeeeee;
+}
+
+.portfolio-image {  
+  opacity: 1;
 }
 
 /* NOTE: Стили подвала */
@@ -381,7 +538,7 @@ button span {
 }
 
 .footer-address h3 {
-  font-family: "Roboto Bold";
+  font-family: "Roboto Bold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
@@ -440,7 +597,7 @@ button span {
 }
 
 .offer-motto {
-  font-family: "Roboto Bold";
+  font-family: "Roboto Bold", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
   color: #000000;

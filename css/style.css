@@ -538,6 +538,7 @@ button span {
 
 .main-footer {
   margin: 0 auto;
+  padding-bottom: 58px;
   min-width: 1200px;
   background-color: #eeeeee;
 }
@@ -545,6 +546,7 @@ button span {
 .footer-map {
   position: relative;
   min-height: 416px;
+  margin-bottom: 60px;
   background-color: #eeeeee;
   background-image: url(../img/map-large.png);
   background-repeat: no-repeat;
@@ -572,6 +574,7 @@ button span {
   box-sizing: border-box;
   width: 319px;
   padding: 31px 50px;
+  padding-bottom: 47px;
   color: #666666;
   line-height: 18px;
   background-color: #ffffff;
@@ -590,19 +593,48 @@ button span {
   margin-bottom: 19px;
 }
 
+.footer-address p:last-of-type {
+  margin-bottom: 36px;
+}
+
 .footer-address a {
-  
+
   color: inherit;
 }
 
+.feedback-button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.social-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .social-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
+  margin-right: 139px;
   padding: 0;
   list-style: none;
 }
 
+.social-list li {
+  margin-right: 10px;
+}
+
+.social-list li:last-child {
+  margin-right: 0;
+}
+
 .social-button {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 80px;
@@ -643,11 +675,17 @@ button span {
 }
 
 .offer-wrapper {
+  margin-top: 15px;
   line-height: 22px;
   color: #444444;
 }
 
-.offer-motto {
+.offer-wrapper p {
+  margin-top: 10px;
+}
+
+p.offer-motto {
+  margin: 0;
   font-family: "Roboto Bold", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;

@@ -223,9 +223,11 @@ button span {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #fb565a;
+  outline: none;
 }
 
-.slider-button:hover {
+.slider-button:hover,
+.slider-button:focus {
   background-color: #e74246;
 }
 
@@ -512,12 +514,13 @@ button span {
   position: relative;
 }
 
-.portfolio-item a {
+.portfolio-link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 300px;
   height: 100px;
+  outline: none;
 }
 
 .portfolio-item:nth-child(n+2)::before {
@@ -531,7 +534,16 @@ button span {
 }
 
 .portfolio-image {
+  opacity: 0.2;
+}
+
+.portfolio-link:hover .portfolio-image,
+.portfolio-link:focus .portfolio-image  {
   opacity: 1;
+}
+
+.portfolio-link:active .portfolio-image  {
+  opacity: 0.1;
 }
 
 /* NOTE: Стили подвала */
@@ -597,7 +609,7 @@ button span {
   margin-bottom: 36px;
 }
 
-.footer-address a {
+.address-phone {
 
   color: inherit;
 }
@@ -605,6 +617,16 @@ button span {
 .feedback-button {
   width: 100%;
   margin-top: auto;
+}
+
+.feedback-button:hover,
+.feedback-button:focus {
+  background-color: #e74246;
+}
+
+.feedback-button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .social-wrapper {
@@ -640,8 +662,22 @@ button span {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  outline: none;
   background-color: #e1e1e1;
   text-align: center;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #e74246;
+}
+
+.social-button:active {
+  background-color: #d7373b;
+}
+
+.social-button:active::before {
+  opacity: 0.3;
 }
 
 .social-vk::before {
@@ -690,4 +726,160 @@ p.offer-motto {
   font-size: 36px;
   line-height: 36px;
   color: #000000;
+}
+
+/* NOTE: Стили формы обратной связи */
+
+.modal-feedback {
+  position: fixed;
+  box-sizing: border-box;
+  top: 146px;
+  left: 50%;
+  display: none;
+  width: 960px;
+  min-height: 590px;
+  padding: 67px 100px 85px;
+  margin-left: -480px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px 5px rgba(0, 0, 0, 0.75);
+}
+
+.modal-visible {
+  display: block;
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feedback-header {
+  margin: 0;
+  margin-bottom: 41px;
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.modal-feedback label {
+  margin-bottom: 9px;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.modal-feedback input {
+  width: 360px;
+}
+
+.modal-feedback textarea {
+  width: 100%;
+  height: 118px;
+  margin-bottom: 47px;
+  resize: none;
+}
+
+.modal-feedback input,
+.modal-feedback textarea {
+  box-sizing: border-box;
+  border: 2px solid #d7dcde;
+  outline: none;
+  border-radius: 3px;
+  padding: 14px;
+}
+
+.modal-feedback input:hover,
+.modal-feedback textarea:hover {
+  border-color: #b4b9bb;
+}
+
+.modal-feedback input:focus,
+.modal-feedback textarea:focus {
+  border-color: #000000;
+}
+
+.modal-feedback input:invalid,
+.modal-feedback textarea:invalid {
+  border-color: #e74246;
+  color: #e74246;
+}
+
+.modal-feedback input::placeholder,
+.modal-feedback textarea::placeholder {
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.modal-feedback input:focus::placeholder,
+.modal-feedback textarea:focus::placeholder {
+  color: rgba(68, 68, 68, 1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 75px;
+  right: 86px;
+  width: 27px;
+  height: 27px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+.modal-close::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 27px;
+  height: 5px;
+  background-color: #fb565a;
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 27px;
+  height: 5px;
+  background-color: #fb565a;
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover,
+.modal-close:focus
+ {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.1;
+}
+
+.submit-button {
+  width: 260px;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #e74246;
+}
+
+.submit-button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
 }

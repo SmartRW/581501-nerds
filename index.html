@@ -167,22 +167,22 @@
         <h2 class="visually-hidden">Наши работы</h2>
         <ul class="portfolio-list">
           <li class="portfolio-item">
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <a class="portfolio-link" href="https://htmlacademy.ru/intensive/htmlcss">
               <img class="portfolio-image" src="img/logo-1.png" alt="HTML Academy" width="199" height="68">
             </a>
           </li>
           <li class="portfolio-item">
-            <a href="#">
+            <a class="portfolio-link" href="#">
               <img class="portfolio-image" src="img/logo-2.png" alt="Barbershop Borodinski" width="209" height="90">
             </a>
           </li>
           <li class="portfolio-item">
-            <a href="">
+            <a class="portfolio-link" href="">
               <img class="portfolio-image" src="img/logo-3.png" alt="Pink" width="185" height="52">
             </a>
           </li>
           <li class="portfolio-item">
-            <a href="">
+            <a class="portfolio-link" href="">
               <img class="portfolio-image" src="img/logo-4.png" alt="Mishka" width="173" height="84">
             </a>
           </li>
@@ -200,9 +200,9 @@
               ул. Б. Конюшенная, д. 19/8
             </p>
             <p>
-              <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+              <a class="address-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
             </p>
-            <button class="button feedback-button">Напишите нам</button>
+            <a class="button feedback-button" href="write-us.html">Напишите нам</a>
           </div>
         </div>
         <span class="visually-hidden">Студия на карте Санкт-Петербурга</span>
@@ -237,17 +237,25 @@
       </div>
     </footer>
     <div class="modal-feedback">
-      <h2 class="feedback">Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <label for="feedback-name">Ваше имя:</label>
-        <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
-        <label for="feedback-email">Ваш e-mail:</label>
-        <input type="email" name="email" id="feedback-email" placeholder="email@example.com">
+      <h2 class="feedback-header">Напишите нам</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="feedback-container">
+          <label for="feedback-name">Ваше имя:</label>
+          <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+        </div>
+        <div class="feedback-container">
+          <label for="feedback-email">Ваш e-mail:</label>
+          <input type="email" name="email" id="feedback-email" placeholder="email@example.com">
+        </div>
         <label for="feedback-message">Текст письма:</label>
         <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button submit-button" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">
+          <span>Закрыть</span>
+        </span>
+      </button>
     </div>
   </body>
 </html>

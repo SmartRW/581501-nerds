@@ -98,12 +98,13 @@ button span {
   min-width: 438px;
   margin: 0;
   padding: 0;
+  padding-bottom: 11px;
   list-style: none;
 }
 
 .main-navigation a {
   display: block;
-  padding: 13px 0;
+  padding: 3px 0;
   border-bottom: 2px solid transparent;
   font-family: "Roboto Medium", "Arial", sans-serif;
   font-size: 16px;
@@ -113,7 +114,9 @@ button span {
 }
 
 .main-navigation a:hover,
-.basket:hover {
+.basket:hover,
+.main-navigation a:focus,
+.basket:focus {
   color: #fb565a;
 }
 
@@ -233,7 +236,8 @@ button span {
 
 .slider-button:active {
   background-color: #d7373b;
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 3px 0 0 #c13135;
 }
 
 .slider-radio {
@@ -355,34 +359,40 @@ button span {
   background-color: #efc84a;
 }
 
-.advantages-sites .advantages-button:hover {
+.advantages-sites .advantages-button:hover,
+.advantages-sites .advantages-button:focus {
   background-color: #e74246;
   cursor: pointer;
 }
 
-.advantages-apps .advantages-button:hover {
+.advantages-apps .advantages-button:hover,
+.advantages-apps .advantages-button:focus {
   background-color: #00bc6c;
   cursor: pointer;
 }
 
-.advantages-presentations .advantages-button:hover {
+.advantages-presentations .advantages-button:hover,
+.advantages-presentations .advantages-button:focus {
   background-color: #eab534;
   cursor: pointer;
 }
 
-.advantages-sites .advantages-button:focus {
+.advantages-sites .advantages-button:active {
   background-color: #d7373b;
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 3px 0 0 #c13135;
 }
 
-.advantages-apps .advantages-button:focus {
+.advantages-apps .advantages-button:active {
   background-color: #00aa62;
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 3px 0 0 #009958;
 }
 
-.advantages-presentations .advantages-button:focus {
+.advantages-presentations .advantages-button:active {
   background-color: #e5a722;
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 3px 0 0 #ce961f;
 }
 
 /* NOTE: стили блока О нас */
@@ -627,6 +637,7 @@ button span {
 .feedback-button:active {
   background-color: #d7373b;
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 3px 0 0 #c13135;
 }
 
 .social-wrapper {
@@ -674,6 +685,7 @@ button span {
 
 .social-button:active {
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 0 #c13135;
 }
 
 .social-button:active::before {
@@ -882,4 +894,294 @@ p.offer-motto {
 .submit-button:active {
   background-color: #d7373b;
   color: rgba(255, 255, 255, 0.3);
+}
+
+/* NOTE: Стили каталога */
+
+.inner-logo:hover,
+.inner-logo:focus {
+  opacity: 0.8;
+}
+
+.inner-logo:active {
+  opacity: 0.3;
+}
+
+.navigation-current a {
+  border-bottom: 2px solid #fb565a;
+}
+
+.navigation-current a:hover,
+.navigation-current a:focus,
+.navigation-current a:active {
+  color: inherit;
+}
+
+.inner-header {
+  margin: 0 auto;
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 55px;
+  line-height: 55px;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.filter {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.filter-form fieldset {
+  padding: 0;
+  border: none;
+}
+
+.filter-form legend {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.price-range {
+  position: relative;
+  width: 260px;
+  min-height: 80px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+.price-range:before {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: 20px;
+  width: 220px;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.price-range:after {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: 20px;
+  width: 152px;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.price-switcher {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  display: block;
+  box-sizing: border-box;
+  width: 21px;
+  height: 21px;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  background-color: #cccccc;
+  box-shadow: 0 2px 2px 0 #cccccc;
+}
+
+.min-price {
+  left: 20px;
+}
+
+.max-price {
+  left: 170px;
+}
+
+.filter-grid-list,
+.filter-features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-grid-list label,
+.filter-features-list label {
+  position: relative;
+  padding-left: 35px;
+}
+
+.filter-grid-list label:hover,
+.filter-grid-list label:focus,
+.filter-features-list label:hover,
+.filter-features-list label:focus {
+  color: #000000;
+}
+
+.filter-grid-list label:active,
+.filter-features-list label:active {
+  color: #283136;
+  opacity: 0.3;
+}
+
+.filter-grid-list input:checked ~ label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/radio-on.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.filter-features-list input:checked ~ label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-on.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.filter-grid-list input:not(:checked) ~ label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/radio-off.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.filter-features-list input:not(:checked) ~ label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.filter-grid-list input ~ label:hover::before,
+.filter-grid-list input ~ label:focus::before,
+.filter-features-list input ~ label:hover::before,
+.filter-features-list input ~ label:focus::before {
+  opacity: 1;
+}
+
+.filter-grid-list input ~ label:active::before,
+.filter-features-list input ~ label:active::before {
+  opacity: 0.4;
+}
+
+.filter-button {
+  width: 260px;
+  background-color: #eeeeee;
+  color: #000000;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: #dfdfdf;
+}
+
+.filter-button:active {
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 #bfbfbf;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.products {
+  width: 760px;
+}
+
+.sorting {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sorting p {
+  margin: 0;
+  margin-right: auto;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sorting-type-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sorting-type-list a {
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.sorting-current a {
+  opacity: 1;
+}
+
+.ranking-type-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ranking-desc::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #000000;
+  border-bottom: none;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.ranking-asc::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #a6a6a6;
+  border-top: none;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
 }

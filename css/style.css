@@ -1086,9 +1086,9 @@ p.offer-motto {
 }
 
 .filter-grid-list input ~ label:hover::before,
-.filter-grid-list input ~ label:focus::before,
+.filter-grid-list input:focus ~ label::before,
 .filter-features-list input ~ label:hover::before,
-.filter-features-list input ~ label:focus::before {
+.filter-features-list input:focus ~ label::before {
   opacity: 1;
 }
 
@@ -1184,4 +1184,124 @@ p.offer-motto {
   border-top: none;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.products-item {
+  position: relative;
+  width: 360px;
+  margin-bottom: 33px;
+}
+
+.products-item::before {
+  content: "";
+  display: block;
+  width: 360px;
+  height: 40px;
+  background-image: url(../img/browser.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.12;
+}
+
+.products-item:hover::before,
+.products-item:focus::before {
+  opacity: 1;
+}
+
+.products-description {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 231px;
+  padding: 0 80px;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.products-item:hover .products-description,
+.products-item:focus .products-description {
+  display: block;
+}
+
+.description-header a {
+  margin: 0;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.products-description p {
+  margin: 0;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.price-button {
+  width: 200px;
+}
+
+.price-button:hover,
+.price-button:focus {
+  background-color: #e74246;
+}
+
+.price-button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 3px 0 0 #c13135;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination li {
+  margin-right: 11px;
+}
+
+.pagination-number {
+  display: block;
+  box-sizing: border-box;
+  width: 50px;
+  min-height: 50px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  color: #000000;
+}
+
+.pagination-current {
+  border: 3px solid #eeeeee;
+  background-color: #ffffff;
+  line-height: 44px;
+}
+
+.pagination-next {
+  width: 260px;
+  margin-right: 0;
+  text-transform: uppercase;
 }

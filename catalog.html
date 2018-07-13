@@ -47,6 +47,14 @@
                   <span class="visually-hidden">Максимальная цена</span>
                 </span>
               </div>
+              <div class="price-check-wrapper">
+                <label for="check-price-from">От
+                  <input class="check-price" name="check-price-from" type="text" id="check-price-from" autocomplete="off" value="0">
+                </label>
+                <label for="check-price-to">До
+                  <input class="check-price" name="check-price-to" autocomplete="off" type="text" id="check-price-to" value="15000">
+                </label>
+              </div>
             </fieldset>
             <fieldset>
               <legend>Сетка:</legend>
@@ -60,7 +68,7 @@
                   <label for="filter-static">Фиксированная</label>
                 </li>
                 <li>
-                  <input class="visually-hidden" type="radio" name="grid" value="fluid" id="filter-fluid">
+                  <input class="visually-hidden" type="radio" name="grid" value="fluid" id="filter-fluid" disabled>
                   <label for="filter-fluid">Резиновая</label>
                 </li>
               </ul>
@@ -85,12 +93,12 @@
                   <label for="filter-gallery">Галерея</label>
                 </li>
                 <li>
-                  <input class="visually-hidden" type="checkbox" name="filter-cart" id="filter-cart">
+                  <input class="visually-hidden" type="checkbox" name="filter-cart" id="filter-cart" disabled>
                   <label for="filter-cart">Корзина</label>
                 </li>
               </ul>
             </fieldset>
-            <button class="button filter-button" type="submit">Показать</button>
+            <button class="button filter-button" type="submit"><span class="IE11-hack">Показать</span></button>
           </form>
         </section>
         <section class="products">
@@ -98,24 +106,24 @@
           <div class="sorting">
             <p>Сортировать:</p>
             <ul class="sorting-type-list">
-              <li class="sorting-current">
-                <a>По цене</a>
+              <li>
+                <a class="sorting-type sorting-current">По цене</a>
               </li>
               <li>
-                <a href="#">По типу</a>
+                <a class="sorting-type" href="#">По типу</a>
               </li>
               <li>
-                <a href="#">По названию</a>
+                <a class="sorting-type" href="#">По названию</a>
               </li>
             </ul>
             <ul class="ranking-type-list">
               <li>
-                <a class="ranking-desc ranking-current">
+                <a class="ranking-type ranking-desc ranking-current">
                   <span class="visually-hidden">По убыванию</span>
                 </a>
               </li>
               <li>
-                <a class="ranking-asc" href="#">
+                <a class="ranking-type ranking-asc" href="#">
                   <span class="visually-hidden">По возрастанию</span>
                 </a>
               </li>
@@ -128,8 +136,8 @@
                 <h3 class="description-header">
                   <a href="#">Sedona</a>
                 </h3>
-                <p>Информационный сайт для туристов</p>
-                <a class="button price-button" href="#">9900 руб.</a>
+                <p>Информационный сайт для&nbsp;туристов</p>
+                <a class="button price-button" href="#">9 900 руб.</a>
               </div>
             </li>
             <li class="products-item">
@@ -139,7 +147,7 @@
                   <a href="#">Pink app</a>
                 </h3>
                 <p>Продуктовый лендинг приложения для iOS и Android</p>
-                <a class="button price-button" href="#">9900 руб.</a>
+                <a class="button price-button" href="#">9 900 руб.</a>
               </div>
             </li>
             <li class="products-item">
@@ -148,8 +156,8 @@
                 <h3 class="description-header">
                   <a href="#">Barbershop</a>
                 </h3>
-                <p>Сайт салона красоты. Для мужчин, да.</p>
-                <a class="button price-button" href="#">9900 руб.</a>
+                <p>Сайт салона красоты. Для&nbsp;мужчин, да.</p>
+                <a class="button price-button" href="#">9 900 руб.</a>
               </div>
             </li>
             <li class="products-item">
@@ -158,8 +166,8 @@
                 <h3 class="description-header">
                   <a href="#">Mishka</a>
                 </h3>
-                <p>Интернет-магазин вязаных игрушек</p>
-                <a class="button price-button" href="#">9900 руб.</a>
+                <p>Интернет-магазин вязаных&nbsp;игрушек</p>
+                <a class="button price-button" href="#">9 900 руб.</a>
               </div>
             </li>
             <li class="products-item">
@@ -169,7 +177,7 @@
                   <a href="#">A plus</a>
                 </h3>
                 <p>Лендинг курсов повышения квалификации</p>
-                <a class="button price-button" href="#">9900 руб.</a>
+                <a class="button price-button" href="#">9 900 руб.</a>
               </div>
             </li>
             <li class="products-item">
@@ -179,7 +187,7 @@
                   <a href="#">Кваст</a>
                 </h3>
                 <p>Промо-сайт производителя крафтового кваса</p>
-                <a class="button price-button" href="#">9900 руб.</a>
+                <a class="button price-button" href="#">9 900 руб.</a>
               </div>
             </li>
           </ul>
@@ -263,9 +271,7 @@
         <button class="button submit-button" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button">
-        <span class="visually-hidden">
-          <span>Закрыть</span>
-        </span>
+        <span class="visually-hidden">Закрыть</span>
       </button>
     </div>
   </body>

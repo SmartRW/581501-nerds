@@ -756,7 +756,7 @@ p.offer-motto {
   box-shadow: 0 20px 40px 5px rgba(0, 0, 0, 0.75);
 }
 
-.modal-visible {
+.modal-show {
   display: block;
 }
 
@@ -848,6 +848,7 @@ p.offer-motto {
   outline: none;
   background-color: transparent;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .modal-close::before {

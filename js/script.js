@@ -1,3 +1,5 @@
+// Оживление модального окна
+
 var modalOverlay = document.querySelector('.modal-overlay')
 var modalFeedback = document.querySelector('.modal-feedback');
 var feedbackForm = document.querySelector('.feedback-form');
@@ -59,3 +61,29 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 });
+
+// Оживление слайдера
+
+var sliderControls = document.querySelectorAll('.slider-control');
+var checkedSliderControl = document.querySelector('.slider-control-current');
+var slides = document.querySelectorAll('.slide');
+var visibleSlide = document.querySelector('.slide-visible');
+
+for (var i = 0; i < sliderControls.length; i++) {
+  sliderControls[i].addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if(!this.classList.contains('slider-control-current')) {
+      checkedSliderControl.classList.remove('slider-control-current');
+      checkedSliderControl = this;
+      this.classList.add('slider-control-current');
+
+      for (var j = 0; j < slides.length; j++) {
+        if (sliderControls[j].classList.contains('slider-control-current')) {
+          visibleSlide.classList.remove('slide-visible');
+          slides[j].classList.add('slide-visible');
+          visibleSlide = slides[j];
+        }
+      }
+    }
+  })
+};

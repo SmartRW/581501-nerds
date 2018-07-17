@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize-min.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
     <div class="header-wrapper">
@@ -98,7 +98,9 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="button filter-button" type="submit"><span class="IE11-hack">Показать</span></button>
+            <button class="button filter-button" type="submit">
+              <span class="IE11-hack">Показать</span>
+            </button>
           </form>
         </section>
         <section class="products">
@@ -230,17 +232,17 @@
       <div class="social-wrapper">
         <ul class="social-list">
           <li>
-            <a class="social-button social-vk" href="">
+            <a class="social-button social-vk" href="#">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li>
-            <a class="social-button social-fb" href="">
+            <a class="social-button social-fb" href="#">
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
           <li>
-            <a class="social-button social-instagram" href="">
+            <a class="social-button social-instagram" href="#">
               <span class="visually-hidden">Инстаграмм</span>
             </a>
           </li>
@@ -269,12 +271,14 @@
         </div>
         <label for="feedback-message">Текст письма:</label>
         <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
-        <button class="button submit-button" type="submit">Отправить</button>
+        <button class="button submit-button" type="submit">
+          <span class="IE11-hack">Отправить</span>
+        </button>
       </form>
       <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </div>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/script-min.js"></script>
   </body>
 </html>

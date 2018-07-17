@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize-min.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
-  <div class="header-wrapper">
+    <div class="header-wrapper">
     <header class="main-header">
         <a class="header-logo">
           <img src="img/nerds-logo.svg" alt="Логотип студии Nerds" width="160" height="65">
@@ -42,7 +42,7 @@
                 Долго, дорого, скрупулезно.
               </h2>
               <p class="slider-description">
-                Математически выверенный дизайн </br>для вашего сайта или мобильного приложения.
+                Математически выверенный дизайн <br>для вашего сайта или мобильного приложения.
               </p>
               <a class="button slider-button" href="#">Узнать больше</a>
             </div>
@@ -53,7 +53,7 @@
                 Любим математику как никто другой
               </h2>
               <p class="slider-description">
-                Никакого креатива, только математические формулы </br>для расчета идеальных пропорций.
+                Никакого креатива, только математические формулы <br>для расчета идеальных пропорций.
               </p>
               <a class="button" href="#">Узнать больше</a>
             </div>
@@ -64,7 +64,7 @@
                 Только ночь, только хардкор
               </h2>
               <p class="slider-description">
-                Работать днем, как все? Мы против этого. </br>Ближе к полуночи работа только начинается.
+                Работать днем, как все? Мы против этого. <br>Ближе к полуночи работа только начинается.
               </p>
               <a class="button" href="#">Узнать больше</a>
             </div>
@@ -73,23 +73,17 @@
         <ul class="slider-radio">
           <li>
             <button class="slider-control slider-control-current" type="button" name="slider-control-one">
-              <span class="IE11-hack">
-                <span class="visually-hidden">Первый слайд</span>
-              </span>
+              <span class="visually-hidden">Первый слайд</span>
             </button>
           </li>
           <li>
             <button class="slider-control" type="button" name="slider-control-two">
-              <span class="IE11-hack">
-                <span class="visually-hidden">Второй слайд</span>
-              </span>
+              <span class="visually-hidden">Второй слайд</span>
             </button>
           </li>
           <li>
             <button class="slider-control" type="button" name="slider-control-three">
-              <span class="IE11-hack">
-                <span class="visually-hidden">Третий слайд</span>
-              </span>
+              <span class="visually-hidden">Третий слайд</span>
             </button>
           </li>
         </ul>
@@ -102,21 +96,27 @@
             <p class="advantages-description">
               Мир никогда не будет прежним после того, как увидит ваш сайт!
             </p>
-            <button class="button advantages-button">Заказать</button>
+            <button class="button advantages-button">
+              <span class="IE11-hack">Заказать</span>
+            </button>
           </li>
           <li class="advantages-item advantages-apps">
             <h3 class="advantages-header">Приложения</h3>
             <p class="advantages-description">
               Покорите топ-10 приложений в AppStore и GooglePlay
             </p>
-            <button class="button advantages-button">Заказать</button>
+            <button class="button advantages-button">
+              <span class="IE11-hack">Заказать</span>
+            </button>
           </li>
           <li class="advantages-item advantages-presentations">
             <h3 class="advantages-header">Презентации</h3>
             <p class="advantages-description">
               Вы даже не подозреваете, насколько вы изумительны!
             </p>
-            <button class="button advantages-button">Заказать</button>
+            <button class="button advantages-button">
+              <span class="IE11-hack">Заказать</span>
+            </button>
           </li>
         </ul>
       </section>
@@ -177,12 +177,12 @@
             </a>
           </li>
           <li class="portfolio-item">
-            <a class="portfolio-link" href="">
+            <a class="portfolio-link" href="#">
               <img class="portfolio-image" src="img/logo-3.png" alt="Pink" width="185" height="52">
             </a>
           </li>
           <li class="portfolio-item">
-            <a class="portfolio-link" href="">
+            <a class="portfolio-link" href="#">
               <img class="portfolio-image" src="img/logo-4.png" alt="Mishka" width="173" height="84">
             </a>
           </li>
@@ -211,17 +211,17 @@
       <div class="social-wrapper">
         <ul class="social-list">
           <li>
-            <a class="social-button social-vk" href="">
+            <a class="social-button social-vk" href="#">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li>
-            <a class="social-button social-fb" href="">
+            <a class="social-button social-fb" href="#">
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
           <li>
-            <a class="social-button social-instagram" href="">
+            <a class="social-button social-instagram" href="#">
               <span class="visually-hidden">Инстаграмм</span>
             </a>
           </li>
@@ -250,12 +250,14 @@
         </div>
         <label for="feedback-message">Текст письма:</label>
         <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
-        <button class="button submit-button" type="submit">Отправить</button>
+        <button class="button submit-button" type="submit">
+          <span class="IE11-hack">Отправить</span>
+        </button>
       </form>
       <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </div>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/script-min.js"></script>
   </body>
 </html>
